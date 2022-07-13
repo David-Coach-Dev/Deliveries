@@ -163,3 +163,4 @@ Stack trace:
 #5 C:\xampp\htdocs\Deliveries\api\index.php(16): RouterController->index()
 #6 {main}
   thrown in C:\xampp\htdocs\Deliveries\api\models\post.model.php on line 49
+[13-Jul-2022 09:19:44 Europe/Berlin] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\Deliveries\api\routers\services\post.php on line 32

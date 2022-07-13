@@ -9,7 +9,8 @@
             require_once "controllers/post.controller.php";
         /********************************************
          *? Variables
-        ********************************************/
+         ********************************************/
+            $suffix=$_GET["suffix"]?? "user";
             $columns=array();
             $response = new PostController();
             $return = new PostController();
@@ -26,7 +27,14 @@
                 return;
             }
         /***********************************************************************************
-         *? solicitud de repuestas del controlador para crear datos en cualquier tabla
-            ***********************************************************************************/
-            $response->postData($table, $_POST);
+         *? Petición POST para el registro de usuarios
+         ***********************************************************************************/
+            if(isset($_GET["register"]) && $_GET["status"]==true){
+                $response->postRegister($table, $_POST, $suffix);
+            }else{
+                /***********************************************************************************
+                 *? solicitud de repuestas del controlador para crear datos en cualquier tabla
+                ***********************************************************************************/
+                    $response->postData($table, $_POST);
+            }
 ?>
