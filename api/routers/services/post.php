@@ -12,6 +12,7 @@
         ********************************************/
             $columns=array();
             $response = new PostController();
+            $return = new PostController();
         /********************************************
          *? Validar la tabla y columnas
          ********************************************/
@@ -21,18 +22,11 @@
                 }
             }
             if (empty(Connection::getColumnsData($table, $columns))){
-                $json = array(
-                    "status" => 400,
-                    "detalle" => "Error: Fields in the form not match the database",
-                    "method" => "POST",
-                );
-                echo json_encode($json, http_response_code($json["status"]));
+                $return -> fncResponse(null,"POST");
                 return;
-            }else{
-                /***********************************************************************************
-                 *? solicitud de repuestas del controlador para crear datos en cualquier tabla
-                 ***********************************************************************************/
-                    $response->postData($table, $_POST);
             }
-
+        /***********************************************************************************
+         *? solicitud de repuestas del controlador para crear datos en cualquier tabla
+            ***********************************************************************************/
+            $response->postData($table, $_POST);
 ?>

@@ -46,11 +46,11 @@
                 ********************************************/
                     if (empty(Connection::getColumnsData($table, $columns))){
                         $return -> fncResponse(null,"deleteData");
-                    }else{
-                        /***********************************************************************************
-                         *? solicitud de repuestas del controlador para borrar datos en cualquier tabla
-                        ***********************************************************************************/
-                            $response->deleteData($table, $data, $id, $nameId);
+                        return;
                     }
+                /***********************************************************************************
+                 *? solicitud de repuestas del controlador para borrar datos en cualquier tabla
+                ***********************************************************************************/
+                    $response->deleteData($table, $data, $id, $nameId);
             }
 ?>

@@ -15,6 +15,7 @@
             $id=$_GET["id"]?? null;
             $nameId=$_GET["nameId"]?? null;
             $response = new PutController();
+            $return = new PutController();
         /********************************************
          *? Validando variables de PUt
          ********************************************/
@@ -32,18 +33,12 @@
                     array_push($columns,$_GET["nameId"]);
                     $columns=array_unique($columns);
                     if (empty(Connection::getColumnsData($table, $columns))){
-                        $json = array(
-                            "status" => 400,
-                            "detalle" => "Error: Fields in the form not match the database",
-                            "method" => "POST",
-                        );
-                        echo json_encode($json, http_response_code($json["status"]));
+                        $return -> fncResponse(null,"PUT");
                         return;
-                    }else{
-                        /***********************************************************************************
-                         *? solicitud de repuestas del controlador para editar datos en cualquier tabla
-                        ***********************************************************************************/
-                            $response->putData($table, $data, $id, $nameId);
                     }
-            }
+                /***********************************************************************************
+                 *? solicitud de repuestas del controlador para editar datos en cualquier tabla
+                 ***********************************************************************************/
+                    $response->putData($table, $data, $id, $nameId);
+                }
 ?>

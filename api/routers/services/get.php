@@ -24,6 +24,7 @@
       $betweenIn=$_GET["betweenIn"]?? null;
       $betweenOut=$_GET["betweenOut"]?? null;
       $response = new GetController();
+      $return = new GetController();
     /****************************************
      ** 01) Con select.
      ****************************************/
@@ -95,11 +96,6 @@
                     $betweenIn, $betweenOut, $orderBy, $orderMode,
                     $startAt, $endAt, $filterTo, $inTo);
         }else{
-          $json = array(
-          "status" => 404,
-            "detalle" => "not found...",
-            "method" => "faltan Parámetros",
-          );
-          echo json_encode($json, http_response_code($json["status"]));
+          $return -> fncResponse(null,"GET");
       }
 ?>

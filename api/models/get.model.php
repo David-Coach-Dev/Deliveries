@@ -14,7 +14,7 @@
          ** Petición Get.
          ********************************/
           static public function getData($table, $select,
-            $orderBy,$orderMode, $startAt, $endAt){
+            $orderBy, $orderMode, $startAt, $endAt){
             /***********************************************
              *? Validar exigencia de la tabla y columnas
             ***********************************************/
