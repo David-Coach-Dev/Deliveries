@@ -164,3 +164,15 @@ Stack trace:
 #6 {main}
   thrown in C:\xampp\htdocs\Deliveries\api\models\post.model.php on line 49
 [13-Jul-2022 09:19:44 Europe/Berlin] PHP Warning:  Undefined array key "status" in C:\xampp\htdocs\Deliveries\api\routers\services\post.php on line 32
+[15-Jul-2022 01:01:52 Europe/Berlin] PHP Warning:  Undefined array key "email_user" in C:\xampp\htdocs\Deliveries\api\controllers\post.controller.php on line 59
+[15-Jul-2022 01:02:16 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\xampp\htdocs\Deliveries\api\controllers\post.controller.php on line 65
+[15-Jul-2022 01:02:16 Europe/Berlin] PHP Warning:  Attempt to read property "Password_user" on null in C:\xampp\htdocs\Deliveries\api\controllers\post.controller.php on line 65
+[15-Jul-2022 01:03:17 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\xampp\htdocs\Deliveries\api\controllers\post.controller.php on line 65
+[15-Jul-2022 01:03:17 Europe/Berlin] PHP Warning:  Attempt to read property "Password_user" on null in C:\xampp\htdocs\Deliveries\api\controllers\post.controller.php on line 65
+[15-Jul-2022 01:07:44 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$Password_user in C:\xampp\htdocs\Deliveries\api\controllers\post.controller.php on line 65
+[15-Jul-2022 01:25:05 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "{" in C:\xampp\htdocs\Deliveries\api\routers\services\post.php on line 26
+[15-Jul-2022 01:32:35 Europe/Berlin] PHP Warning:  Undefined array key "email_users" in C:\xampp\htdocs\Deliveries\api\controllers\post.controller.php on line 65
+[15-Jul-2022 01:32:51 Europe/Berlin] PHP Warning:  Undefined array key "password_user" in C:\xampp\htdocs\Deliveries\api\controllers\post.controller.php on line 70
+[15-Jul-2022 01:46:57 Europe/Berlin] PHP Warning:  Undefined variable $pass_crypt in C:\xampp\htdocs\Deliveries\api\controllers\post.controller.php on line 72
+[15-Jul-2022 01:47:14 Europe/Berlin] PHP Warning:  Undefined variable $pass_crypt in C:\xampp\htdocs\Deliveries\api\controllers\post.controller.php on line 72
+[15-Jul-2022 01:47:24 Europe/Berlin] PHP Warning:  Undefined variable $pass_crypt in C:\xampp\htdocs\Deliveries\api\controllers\post.controller.php on line 71

@@ -23,18 +23,23 @@
                 }
             }
             if (empty(Connection::getColumnsData($table, $columns))){
-                $return -> fncResponse(null,"POST");
-                return;
+                $return->fncResponse(null,"POST","Files not match the DB" );
             }
         /***********************************************************************************
          *? Petición POST para el registro de usuarios
          ***********************************************************************************/
-            if(isset($_GET["register"]) && $_GET["status"]==true){
+            if(isset($_GET["register"]) && $_GET["register"]==true){
                 $response->postRegister($table, $_POST, $suffix);
-            }else{
-                /***********************************************************************************
-                 *? solicitud de repuestas del controlador para crear datos en cualquier tabla
-                ***********************************************************************************/
-                    $response->postData($table, $_POST);
-            }
+            }else
+            /***********************************************************************************
+             *? Petición POST para el registro de usuarios
+             ***********************************************************************************/
+                if(isset($_GET["login"]) && $_GET["login"]==true){
+                    $response->postLogin($table, $_POST, $suffix);
+                }else{
+                    /***********************************************************************************
+                     *? solicitud de repuestas del controlador para crear datos en cualquier tabla
+                    ***********************************************************************************/
+                        $response->postData($table, $_POST);
+                }
 ?>

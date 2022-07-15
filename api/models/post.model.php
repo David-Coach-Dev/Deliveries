@@ -47,11 +47,11 @@
                          *? Ejecutar sentencia sql.
                         ********************************/
                             if($stmt->execute()){
-                                $json = array(
+                                $response = array(
                                                 "lastId" => $link->lastInsertId(),
                                                 "comment"=>"The process was successful"
                                             );
-                                return $json;
+                                return $response;
                             }else{
                                 return $link->errorInfo();
                             }
